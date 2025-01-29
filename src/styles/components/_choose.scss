@@ -1,0 +1,96 @@
+@use "../mixins/media-mixins" as media-mixins;
+
+.choose {
+  margin-top: clamp(4.375rem, 2.938rem + 7.187vw, 11.563rem);
+  &__inner {
+    max-width: 1191px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 40px;
+    line-height: 36px;
+    font-family: "Philosopher", sans-serif;
+    color: #363434;
+    margin-bottom: 25px;
+    @include media-mixins.media-max(1000px) {
+      font-size: 30px;
+    }
+    @include media-mixins.media-max(768px) {
+      font-size: 27px;
+      line-height: 27px;
+    }
+    @include media-mixins.media-max(320px) {
+      font-size: 21px;
+      line-height: 21px;
+    }
+  }
+
+  &__subtitle {
+    color: #363434;
+    font-size: clamp(0.813rem, 0.787rem + 0.125vw, 0.938rem);
+    font-weight: 300;
+  }
+
+  &__blocks {
+    margin-top: clamp(2.188rem, 1.813rem + 1.875vw, 4.063rem);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 29px;
+    @include media-mixins.media-max(480px) {
+      row-gap: 40px;
+    }
+
+    @include media-mixins.media-max(320px) {
+      column-gap: 0;
+      row-gap: 45px;
+    }
+  }
+
+  &__block {
+    flex-basis: 21%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media-mixins.media-max(640px) {
+      flex-basis: 43.1%;
+    }
+    @include media-mixins.media-max(320px) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__block-img {
+  }
+
+  &__block-title {
+    margin-top: 24px;
+    color: #0b0b0b;
+    font-size: 19px;
+    font-weight: 500;
+    @include media-mixins.media-max(1000px) {
+      font-size: 15px;
+      line-height: 25px;
+    }
+    @include media-mixins.media-max(768px) {
+      line-height: 20px;
+    }
+    @include media-mixins.media-max(320px) {
+      font-size: 14px;
+    }
+  }
+
+  &__block-text {
+    margin-top: 26px;
+    font-size: 15px;
+    color: #7e7e7e;
+    line-height: 151%;
+    @include media-mixins.media-max(1000px) {
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+}

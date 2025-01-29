@@ -1,0 +1,297 @@
+@use "../_colors.scss" as colors;
+@use "../mixins/media-mixins" as media-mixins;
+
+.directions {
+  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 268px;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  @include media-mixins.media-max(560px) {
+    padding-bottom: 310px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/directions-lawn.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+    @include media-mixins.media-max(560px) {
+      background-position: bottom center;
+    }
+  }
+
+  &__photo-bg-1,
+  &__photo-bg-2,
+  &__photo-bg-clouds {
+    position: absolute;
+  }
+
+  &__photo-bg-1,
+  &__photo-bg-2 {
+    bottom: 2%;
+  }
+
+  &__photo-bg-1 {
+    left: 3%;
+    z-index: 2;
+
+    @include media-mixins.media-max(1790px) {
+      height: 400px;
+    }
+
+    @include media-mixins.media-max(1000px) {
+      width: 202px;
+      height: 350px;
+      left: 2%;
+    }
+    @include media-mixins.media-max(768px) {
+      width: 157px;
+      height: 272px;
+      bottom: 0;
+    }
+
+    @include media-mixins.media-max(420px) {
+      left: -9%;
+    }
+    @include media-mixins.media-max(320px) {
+      left: -14%;
+    }
+  }
+
+  &__photo-bg-2 {
+    right: 1%;
+    z-index: 2;
+
+    @include media-mixins.media-max(1790px) {
+      width: 239px;
+      height: 400px;
+      right: 0;
+    }
+
+    @include media-mixins.media-max(1000px) {
+      height: 342px;
+    }
+    @include media-mixins.media-max(768px) {
+      width: 189px;
+      height: 270px;
+      bottom: 0;
+    }
+    @include media-mixins.media-max(420px) {
+      right: -17%;
+    }
+    @include media-mixins.media-max(320px) {
+      right: -21%;
+    }
+  }
+
+  &__photo-bg-clouds {
+    bottom: 0;
+    z-index: 5;
+
+    @include media-mixins.media-max(480px) {
+      height: 90px;
+    }
+  }
+
+  &__inner {
+    max-width: 1190px;
+    padding: 0 20px;
+    color: #363434;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 32px;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  &__blocks {
+    margin-top: clamp(55px, 5.21vw, 100px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: start;
+    column-gap: 30px;
+    row-gap: 55px;
+
+    @include media-mixins.media-max(1000px) {
+      grid-template-columns: 300px 300px 300px;
+    }
+
+    @include media-mixins.media-max(975px) {
+      grid-template-columns: repeat(3, 260px);
+      column-gap: 20px;
+    }
+
+    @include media-mixins.media-max(845px) {
+      grid-template-columns: repeat(2, 354px);
+      column-gap: 20px;
+      row-gap: 45px;
+      align-items: stretch;
+    }
+
+    @include media-mixins.media-max(740px) {
+      grid-template-columns: repeat(2, 255px);
+    }
+
+    @include media-mixins.media-max(480px) {
+      grid-template-columns: repeat(2, 230px);
+      column-gap: 10px;
+      row-gap: 40px;
+      align-items: stretch;
+    }
+
+    @include media-mixins.media-max(560px) {
+      grid-template-columns: 300px;
+      column-gap: 0;
+      row-gap: 60px;
+    }
+  }
+
+  &__block {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 240px 45px 45px;
+
+    @include media-mixins.media-max(1165px) {
+      padding-top: 180px;
+    }
+
+    @include media-mixins.media-max(1000px) {
+      padding: 180px 25px 25px;
+    }
+
+    @include media-mixins.media-max(740px) {
+      padding-top: 130px;
+    }
+
+    @include media-mixins.media-max(480px) {
+      padding: 145px 10px 63px;
+    }
+
+    @include media-mixins.media-max(320px) {
+      padding: 145px 12px 23px;
+    }
+
+    img {
+      position: absolute;
+      top: -25px;
+      width: 320px;
+      height: 220px;
+      border-radius: 5px;
+
+      @include media-mixins.media-max(1165px) {
+        width: 250px;
+        height: 180px;
+      }
+
+      @include media-mixins.media-max(1000px) {
+        width: 250px;
+        height: 180px;
+      }
+
+      @include media-mixins.media-max(975px) {
+        width: 205px;
+        height: 180px;
+      }
+
+      @include media-mixins.media-max(845px) {
+        width: 304px;
+      }
+
+      @include media-mixins.media-max(740px) {
+        width: 190px;
+        height: 130px;
+      }
+
+      @include media-mixins.media-max(480px) {
+        width: 200px;
+        height: 130px;
+      }
+      @include media-mixins.media-max(480px) {
+        width: 250px;
+        height: 150px;
+      }
+    }
+
+    &:nth-child(4),
+    &:nth-child(6) {
+      position: relative;
+      transform: translateY(-66px);
+
+      @include media-mixins.media-max(1707px) {
+        transform: translateY(-30px);
+      }
+
+      @include media-mixins.media-max(845px) {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__block-title {
+    position: relative;
+    margin-bottom: clamp(21px, 2.66vw, 51px);
+    font-size: clamp(14px, 1.2vw, 23px);
+    font-weight: 500;
+    &::before {
+      --top--offest: 25px;
+      content: "";
+      position: absolute;
+      top: calc(100% + var(--top--offest));
+      left: 50%;
+      transform: translateX(-50%);
+      width: 26px;
+      height: 1px;
+      background: colors.$green-dark;
+
+      @include media-mixins.media-max(1000px) {
+        --top--offest: 15px;
+      }
+
+      @include media-mixins.media-max(768px) {
+        --top--offest: 10px;
+      }
+    }
+  }
+
+  &__block-text {
+    font-size: clamp(13px, 0.78vw, 15px);
+    color: #7e7e7e;
+  }
+
+  &__btn {
+    padding: 21px 75px;
+    text-transform: uppercase;
+    margin-top: clamp(30px, 2.6vw, 50px);
+
+    @include media-mixins.media-max(1000px) {
+      padding: 15px 53px;
+    }
+
+    @include media-mixins.media-max(768px) {
+      padding: 14px 50px;
+    }
+
+    @include media-mixins.media-max(320px) {
+      padding: 15px 45px;
+    }
+  }
+}

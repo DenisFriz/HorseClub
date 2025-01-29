@@ -1,0 +1,169 @@
+@use "../mixins/media-mixins" as media-mixins;
+
+.world {
+  position: relative;
+  padding-top: 157px;
+  padding-bottom: 359px;
+  background: url("../images/main-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1920px;
+  max-height: 948px;
+
+  @include media-mixins.media-max(1000px) {
+    background-position-x: 33%;
+    background-size: 105%;
+    padding-top: 111px;
+    padding-bottom: 188px;
+  }
+
+  @include media-mixins.media-max(768px) {
+    background-position-x: 41%;
+  }
+
+  &__inner {
+    max-width: 1210px;
+    padding: 0 20px;
+  }
+
+  &__body {
+    max-width: 613px;
+    @include media-mixins.media-max(1000px) {
+      max-width: 506px;
+    }
+    @include media-mixins.media-max(480px) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-size: clamp(1.5rem, 1.087rem + 2.063vw, 3.563rem);
+    color: #000;
+    margin-bottom: 40px;
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+
+    @include media-mixins.media-max(1000px) {
+      margin-bottom: 30px;
+    }
+    @include media-mixins.media-max(768px) {
+      margin-bottom: 20px;
+    }
+    @include media-mixins.media-max(480px) {
+      margin-bottom: 26px;
+    }
+    @include media-mixins.media-max(320px) {
+      margin-bottom: 31px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    font-size: clamp(0.813rem, 0.675rem + 0.688vw, 1.5rem);
+    color: #646464;
+    padding-left: 46px;
+
+    @include media-mixins.media-max(480px) {
+      padding-left: 0;
+    }
+
+    > b {
+      font-weight: 700;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 0;
+      width: 26px;
+      height: 1px;
+      background: #8f8f8f;
+
+      @include media-mixins.media-max(480px) {
+        top: -10px;
+        left: 50%;
+        transform: translate(-50%);
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 42px;
+    padding: 21px 75px;
+    letter-spacing: 2px;
+    width: 270px;
+    height: 70px;
+    line-height: 32px;
+    font-size: 15px;
+    @include media-mixins.media-max(1000px) {
+      margin-top: 37px;
+      padding: 14px 54px;
+      width: 218px;
+      height: 60px;
+      font-size: 13px;
+    }
+    @include media-mixins.media-max(768px) {
+      margin-top: 20px;
+      padding: 6px 50px;
+      width: 180px;
+      height: 45px;
+      font-size: 10px;
+    }
+    @include media-mixins.media-max(320px) {
+      margin-top: 25px;
+      padding: 16px 44px;
+      width: 170px;
+      height: 43px;
+      line-height: 10px;
+    }
+  }
+
+  &__bg-horse {
+    position: absolute;
+    top: 19.1%;
+    left: 50.7%;
+    width: 556px;
+    height: 671px;
+    object-fit: contain;
+    @include media-mixins.media-max(1275px) {
+      top: 15.5%;
+      left: 46.4%;
+    }
+    @include media-mixins.media-max(1100px) {
+      top: 29.5%;
+      left: 57.4%;
+      width: 365px;
+      height: 437px;
+    }
+    @include media-mixins.media-max(1000px) {
+      top: 19.5%;
+      left: 46.4%;
+      width: 365px;
+      height: 371px;
+    }
+    @include media-mixins.media-max(900px) {
+      left: 48.4%;
+    }
+    @include media-mixins.media-max(768px) {
+      top: 34%;
+      left: 52%;
+      width: 368px;
+      height: 371px;
+    }
+    @include media-mixins.media-max(672px) {
+      left: 37%;
+    }
+    @include media-mixins.media-max(588px) {
+      top: 55%;
+      left: 44%;
+      width: 260px;
+      height: 260px;
+    }
+    @include media-mixins.media-max(480px) {
+      top: 65.18%;
+      left: 25.8%;
+      width: 190px;
+      height: 190px;
+    }
+  }
+}

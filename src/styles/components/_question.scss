@@ -1,0 +1,182 @@
+@use "../mixins/media-mixins" as media-mixins;
+
+.question {
+  position: relative;
+  background: url("../images/question-bg.png");
+  background-repeat: no-repeat;
+  margin-top: 140px;
+  padding-top: 140px;
+  padding-bottom: 113px;
+  overflow: hidden;
+
+  @include media-mixins.media-max(768px) {
+    background-size: cover;
+    background-position: 20%;
+    height: 1107px;
+    background-position: 35%;
+  }
+
+  &__inner {
+    max-width: 1694px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    @include media-mixins.media-max(768px) {
+      justify-content: center;
+    }
+  }
+
+  &__img-girl-with-horse {
+    position: absolute;
+    bottom: 0;
+    left: 6.5%;
+
+    @include media-mixins.media-max(1000px) {
+      left: 3.5%;
+      height: 440px;
+    }
+
+    @include media-mixins.media-max(768px) {
+      width: 882px;
+      left: 50%;
+      bottom: 2%;
+      transform: translateX(-27%);
+    }
+
+    @include media-mixins.media-max(672px) {
+      width: 630px;
+      object-fit: contain;
+      left: 18%;
+      bottom: -10%;
+    }
+
+    @include media-mixins.media-max(480px) {
+      display: none;
+    }
+  }
+
+  &__img-bg-cloud-bottom {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__img-bg-cloud-top {
+    position: absolute;
+    top: 0;
+  }
+
+  &__block {
+    max-width: 470px;
+    padding: 60px 50px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 16px 51px 0 rgba($color: #000000, $alpha: 0.11);
+    text-align: center;
+    border: 1px solid #eaeaea;
+    position: relative;
+    z-index: 5;
+
+    @include media-mixins.media-max(1000px) {
+      padding: 60px 55px;
+      max-width: 450px;
+    }
+
+    @include media-mixins.media-max(768px) {
+      padding: 50px 70px;
+    }
+
+    @include media-mixins.media-max(480px) {
+      max-width: 400px;
+    }
+
+    @include media-mixins.media-max(320px) {
+      padding: 40px 28px;
+      max-width: 300px;
+    }
+  }
+
+  &__title {
+    font-size: clamp(22px, 1.82vw, 35px);
+    line-height: 35px;
+    font-family: "Philosopher", sans-serif;
+    color: #363434;
+    margin-bottom: 15px;
+
+    @include media-mixins.media-max(320px) {
+      line-height: 22px;
+    }
+  }
+
+  &__text {
+    font-size: clamp(13px, 0.78vw, 15px);
+    line-height: 21px;
+    color: #7e7e7e;
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    input {
+      padding: 20px 30px 20px 21px;
+      border-radius: 5px;
+      border: 1px solid #8f8f8f;
+      color: #a5a5a5;
+      font-size: 18px;
+      margin-bottom: 20px;
+
+      @include media-mixins.media-max(350px) {
+        padding: 15px 18px 20px 14px;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 28px 60px;
+    margin-bottom: 30px;
+  }
+
+  &__form-bottom {
+    display: flex;
+    text-align: start;
+    justify-content: center;
+    color: #8a8a8a;
+    font-size: clamp(13px, 0.78vw, 15px);
+    column-gap: 10px;
+  }
+
+  &__form-custom-input {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    border: 2px solid #ffc700;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+
+    label {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url("../images/question-mark.png") no-repeat center;
+      width: 13px;
+      height: 12px;
+    }
+
+    input[type="checkbox"] {
+      opacity: 0;
+      cursor: pointer;
+      &:checked + label {
+        display: block;
+      }
+    }
+  }
+
+  &__form-link {
+    color: #8a8a8a;
+  }
+}

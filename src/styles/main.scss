@@ -1,0 +1,39 @@
+@use "./_stylesFonts";
+@use "./reusable-blocks";
+@use "./components/header";
+@use "./components/world";
+@use "./components/about";
+@use "./components/choose";
+@use "./components/directions";
+@use "./components/clients";
+@use "./components/question";
+@use "./components/horses";
+@use "./components/footer";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}

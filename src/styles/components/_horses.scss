@@ -1,0 +1,87 @@
+.horses {
+  margin-top: 150px;
+  &__inner {
+    position: relative;
+  }
+
+  &__title {
+    font-size: clamp(21px, 2.08vw, 40px);
+    font-family: "Philosopher", sans-serif;
+    line-height: 36px;
+    text-align: center;
+    color: #363434;
+    margin-bottom: clamp(55px, 4.95vw, 95px);
+  }
+
+  &__slider-item {
+    min-width: 280px;
+    cursor: grab;
+    max-width: clamp(260px, 19.27vw, 370px);
+    padding: 0 25px 45px 25px;
+    border-radius: 5px;
+    box-shadow: 0 14px 30px 0 rgba($color: #000000, $alpha: 0.07);
+    border: 1px solid #eaeaea;
+  }
+
+  &__img {
+    position: relative;
+    top: -25px;
+    img {
+      border-radius: 5px;
+    }
+  }
+
+  &__item-title {
+    display: block;
+    font-weight: 500;
+    color: #363434;
+    font-size: clamp(15px, 1.2vw, 23px);
+    position: relative;
+    margin-bottom: clamp(21px, 2.67vw, 51px);
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #008139;
+      width: 26px;
+      height: 1px;
+    }
+  }
+
+  &__text {
+    font-size: clamp(13px, 0.78vw, 15px);
+    line-height: 21px;
+    color: #7e7e7e;
+  }
+}
+.swiper {
+}
+.HorsesSwiper {
+  .swiper-slide-active {
+    position: relative;
+    top: 40px;
+  }
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.clients {
+  &__slider-bottom {
+  }
+
+  &__button-prev {
+  }
+
+  &__pagination {
+  }
+
+  &__button-next {
+  }
+}
+.slider-button {
+}
+.swiper-pagination {
+}
